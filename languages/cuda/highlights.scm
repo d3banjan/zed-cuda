@@ -1,6 +1,7 @@
+; inherits: cpp
+
 ; CUDA extends C++, so inherit its declaration, expression, and type highlights.
 ; The CUDA-specific literals and nodes below are provided by tree-sitter-cuda.
-; inherits: cpp
 
 [
   "__host__"
