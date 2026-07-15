@@ -1,0 +1,8 @@
+# Tree-sitter and Node.js build artefacts
+node_modules/
+build/
+*.wasm
+
+# Local editor and test files
+.zed/
+.tree-sitter/
