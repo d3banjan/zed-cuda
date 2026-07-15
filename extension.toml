@@ -4,7 +4,7 @@ version = "0.1.0"
 schema_version = 1
 authors = ["Debanjan Basu <dbasu2007@gmail.com>"]
 description = "CUDA syntax highlighting and editing support"
-repository = "https://github.com/debanjanb/zed-cuda"
+repository = "https://github.com/d3banjan/zed-cuda"
 
 [grammars.cuda]
 repository = "https://github.com/tree-sitter-grammars/tree-sitter-cuda"
