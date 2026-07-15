@@ -1,5 +1,7 @@
 # CUDA for Zed
 
+[![Validate CUDA extension](https://github.com/d3banjan/zed-cuda/actions/workflows/ci.yml/badge.svg)](https://github.com/d3banjan/zed-cuda/actions/workflows/ci.yml)
+
 `zed-cuda` adds CUDA source recognition, Tree-sitter syntax highlighting,
 bracket matching, indentation, and document-outline support to
 [Zed](https://zed.dev/). It recognizes `.cu` and `.cuh` files.
@@ -21,6 +23,18 @@ launches such as `kernel<<<grid, block, shared_memory, stream>>>(...)`.
 It deliberately does not provide an LSP, completion, or live compiler
 diagnostics. Build CUDA projects with `nvcc`; NVCC is the source of truth for
 CUDA diagnostics.
+
+## Validate locally
+
+Install the [Tree-sitter CLI](https://tree-sitter.github.io/tree-sitter/creating-parsers/1-getting-started.html), then run:
+
+```sh
+scripts/check.sh
+```
+
+The check fetches the exact grammar revision pinned in `extension.toml`, runs
+its upstream tests, parses both CUDA fixtures, and validates every extension
+query against `examples/basics.cu`.
 
 ## Grammar provenance
 
