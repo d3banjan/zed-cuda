@@ -33,8 +33,8 @@ scripts/check.sh
 ```
 
 The check fetches the exact grammar revision pinned in `extension.toml`, runs
-its upstream tests, parses both CUDA fixtures, and validates every extension
-query against `examples/basics.cu`.
+its upstream tests, and parses and validates every extension query against both
+CUDA fixtures.
 
 ## Grammar provenance
 

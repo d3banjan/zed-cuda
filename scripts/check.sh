@@ -34,7 +34,9 @@ fi
     tree-sitter parse --quiet "$repo_root/examples/basics.cu"
     tree-sitter parse --quiet "$repo_root/examples/types.cuh"
 
-    for query in "$repo_root"/languages/cuda/*.scm; do
-        tree-sitter query "$query" "$repo_root/examples/basics.cu"
+    for fixture in "$repo_root/examples/basics.cu" "$repo_root/examples/types.cuh"; do
+        for query in "$repo_root"/languages/cuda/*.scm; do
+            tree-sitter query "$query" "$fixture"
+        done
     done
 )
